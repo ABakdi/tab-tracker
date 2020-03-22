@@ -1,8 +1,25 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-app>
+      <main>
+        <page-header/>
+        <v-container fluid>
+          <router-view/>
+        </v-container>
+      </main>
+    </v-app>
   </div>
 </template>
+<script>
+// @ is an alias to /src
+import PageHeader from '@/components/Header.vue'
+export default {
+  name: 'app',
+  components: {
+    PageHeader
+  }
+}
+</script>
 
 <style>
 #app {
